@@ -7,8 +7,8 @@ function ItemCard (props){
             <div className="card-body">
                 <h5 className="card-title">{props.title}</h5>
                 <p className="card-text">{props.description}</p>
-                <a href="#" className="btn btn-primary" onClick={addToCart}>Add to Cart</a>
-                <a href="#" className="btn btn-primary" onClick={seeDetails}>See Details</a>
+                {/*<a href="#" className="btn btn-primary" onClick={(e)=> this.props.addToCart(props.id)}>Add to Cart</a>*/}
+                {/*<a href="http" className="btn btn-primary" onClick={(e)=> this.props.seeDetails(props.id)}</a>*/}
 
             </div>
     </div>)

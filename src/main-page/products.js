@@ -15,6 +15,9 @@ class Products extends React.Component {
             categories: category
         })
     };
+    seeDetails = (productId) => {
+
+    }
 
     render () {
         let product;
