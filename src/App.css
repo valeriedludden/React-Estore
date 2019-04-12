@@ -31,3 +31,14 @@
     transform: rotate(360deg);
   }
 }
+
+.productContainer {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card{
+  width: 300px;
+  height: auto;
+  margin: 20px;
+}
