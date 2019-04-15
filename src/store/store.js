@@ -4,6 +4,7 @@ import thunk from 'redux-thunk'
 import {getProducts} from './actions'
 
 
+
 const reducer = combineReducers({
     products : productsReducer,
     categories : categoriesReducer,
@@ -29,31 +30,44 @@ function categoriesReducer (state = [], action) {
 
 function cartReducer (state = [], action) {
 
-    if(action.type === 'ADD_CART'){
-        let oldCart = state;
-        console.log(oldCart)
-        console.log(action.item.id)
-        oldCart.forEach( p => {
-            console.log(p)
-            if(p.item.id === action.item.id){
-                p.item.count++
-                console.log('add one more')
-            }
-            else
-            {
-                let item = {
-                    count: 1,
-                    item: action.item
-                }
-            oldCart.push(item)
-                console.log('add to cart')
-            }
-        })
+    if (action.type === 'ADD_CART') {
 
-     return oldCart
+            if(state.find( i => i.product.id === action.item.product.id))
+                return state.map(
+                    i => (
+                        i.product.id === action.item.product.id
+                            ? { count: i.count++, ...i }
+                            : i
+                    )
+                )
+            else
+                return [...state, action.item]
+
     }
-    else
-    {
+    else if (action.type === 'REMOVE_FROM_CART'){
+        return state.filter( i => i.product.id !== action.id)
+}
+    else if (action.type === 'ADD_MORE'){
+        return state.map(
+            i => (
+                i.product.id === action.id
+                    ? { count: i.count++, ...i }
+                    : i
+            )
+        )
+    }
+    else if (action.type === 'REMOVE_ONE'){
+        return state.map(
+            i => (
+                i.product.id === action.id
+                    ? { count: i.count--, ...i }
+                    : i
+            )
+        )
+    }
+
+
+    else {
         return state;
     }
 }

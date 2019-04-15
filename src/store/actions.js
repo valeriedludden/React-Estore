@@ -25,3 +25,27 @@ export function getCategories () {
             )
     }
 }
+export function addToCart(product){
+    return{
+        type: 'ADD_CART',
+        item: { product, count: 1}
+    }
+}
+export function removeFromCart(id){
+    return {
+        type: 'REMOVE_FROM_CART',
+        id: id
+    }
+}
+export function addQuanity(id){
+    return {
+        type: 'ADD_MORE',
+        id: id
+    }
+}
+export function decreaseQuantity(id){
+    return {
+        type: 'REMOVE_ONE',
+        id: id
+    }
+}
