@@ -21,8 +21,8 @@ class App extends Component {
         <Router>
             <Nav />
             <div>
-                <Route path='/products' component={Products} />
-                <Route path='/productDetails' component={ProductDetails} />
+                <Route exact path='/products' component={Products} />
+                <Route path='/products/:id' component={ProductDetails} />
                 <Route path='/cart' component={Cart} />
             </div>
         </Router>

@@ -15,8 +15,11 @@ class Products extends React.Component {
             categories: category
         })
     };
-    seeDetails = (productId) => {
-
+    addToCart = (id) => {
+        this.props.dispatch({
+            type: 'ADD_CART',
+            item: id
+        })
     }
 
     render () {
@@ -24,14 +27,13 @@ class Products extends React.Component {
 
         if(this.state.categories === '') {
             product = this.props.products.map(product => {
-                return <ItemCard key={product.id} {...product}/>
+                return <ItemCard key={product.id} product={product} addToCart={this.addToCart}/>
             });
         }
         else {
             product = _.filter(this.props.products, {'category': this.state.categories}).map(product =>{
-                return <ItemCard key={product.id} {...product}/>
+                return <ItemCard key={product.id} product={product}/>
             });
-            console.log(product)
             console.log(this.state.categories)
         }
 

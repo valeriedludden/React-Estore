@@ -1,4 +1,5 @@
 import React from 'react';
+import {connect} from "react-redux";
 
 const Cart = () => {
     return (
@@ -8,4 +9,10 @@ const Cart = () => {
 
 };
 
-export default Cart;
+function MapStatetoProps (state) {
+    return {
+        cart : state.cart
+    }
+}
+
+export default connect(MapStatetoProps)(Cart);
