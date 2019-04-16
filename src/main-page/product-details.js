@@ -31,7 +31,7 @@ class ProductDetails extends React.Component {
                         <p className="card-text">{item.description}</p>
                         <h6>Price ${item.price}</h6>
                         <h6>Rating {item.rating}</h6>
-                        {/*<button type="button" className="btn btn-info" onClick={(e)=> this.props.dispatch(this.addToCart(item.id))}>Add to Cart</button>*/}
+                        <button type="button" className="btn btn-info" onClick={(e)=> this.props.dispatch(addToCart(item.id))}>Add to Cart</button>
                     </div>
                     <Link  to={`/products/`}>Back to All Products</Link>
                 </div>

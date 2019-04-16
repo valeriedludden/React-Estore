@@ -59,7 +59,7 @@ function cartReducer (state = [], action) {
     else if (action.type === 'REMOVE_ONE'){
         return state.map(
             i => (
-                i.product.id === action.id
+                i.product.id === action.id && i.count > 1
                     ? { count: i.count--, ...i }
                     : i
             )
