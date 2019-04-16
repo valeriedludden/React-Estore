@@ -1,0 +1,13 @@
+.links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    width: 100%;
+}
+
+.linksDiv{
+    margin: auto;
+    width: 100%;
+}

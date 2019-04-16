@@ -7,7 +7,7 @@ import ProductDetails from './product-details';
 import Cart from './cart'
 import { connect } from 'react-redux';
 import {getCategories, getProducts} from "../store/actions";
-import store from "../store/store";
+import Footer from './footer'
 
 class App extends Component {
     componentDidMount () {
@@ -21,10 +21,12 @@ class App extends Component {
         <Router>
             <Nav />
             <div>
+                <Route exact path='/' component={Products} />
                 <Route exact path='/products' component={Products} />
                 <Route path='/products/:id' component={ProductDetails} />
                 <Route path='/cart' component={Cart} />
             </div>
+            <Footer/>
         </Router>
     );
   }

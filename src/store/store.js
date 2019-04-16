@@ -65,6 +65,9 @@ function cartReducer (state = [], action) {
             )
         )
     }
+    else if(action.type === 'CLEAR_CART'){
+        return []
+    }
 
 
     else {

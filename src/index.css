@@ -15,3 +15,31 @@ code {
 #nav{
   background-color: deeppink;
 }
+
+.footer{
+  height: 200px;
+  background-color: black;
+  color: white;
+  font-size: 30px;
+}
+.emptyCart{
+  height: 200px;
+  width: 100%;
+  color: #1a69a4;
+  font-size: 40px;
+  margin: auto;
+  text-align: center;
+}
+.shopping-link{
+  font-size: 20px;
+}
+.cart-header{
+  text-align: center;
+  color: #1a69a4;
+  font-size: 40px;
+}
+.shopping-link{
+  text-align: center;
+  width: 100%;
+  margin: auto;
+}

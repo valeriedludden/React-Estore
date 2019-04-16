@@ -49,3 +49,9 @@ export function decreaseQuantity(id){
         id: id
     }
 }
+export function clearCart(){
+    return {
+        type: 'CLEAR_CART',
+
+    }
+}

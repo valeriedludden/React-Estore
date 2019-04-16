@@ -12,8 +12,9 @@ const Nav = () => {
             <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div className="navbar-nav">
                     <NavLink to='/products' className="nav-item nav-link" >Shop</NavLink>
-                    <NavLink to='/productDetails' className="nav-item nav-link" >Product Details</NavLink>
-                    <NavLink to='/cart' className="nav-item nav-link" >Cart</NavLink>
+                    {/*<NavLink to='/productDetails' className="nav-item nav-link" >Product Details</NavLink>*/}
+                    <NavLink to='/cart' className="nav-item nav-link" ><i className="fas fa-shopping-cart"></i></NavLink>
+
 
                 </div>
             </div>
